@@ -79,7 +79,7 @@ export default function Footer() {
           </p>
           <p className="text-cream/20 text-[10px]">
             Desarrollado por{" "}
-            <a href="https://www.enigmasac.com" target="_blank" rel="noopener noreferrer" className="hover:text-cream/40 transition-colors underline">
+            <a href="http://enigmasac.com" target="_blank" rel="noopener noreferrer" className="hover:text-cream/40 transition-colors underline">
               Enigma Developers
             </a>
           </p>
