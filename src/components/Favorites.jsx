@@ -70,7 +70,7 @@ function FavoriteCard({ item, index }) {
             </a>
             <div className="h-px bg-line/30" />
             <Link
-              to="/carta"
+              to={`/carta#${item.categoryId}`}
               onClick={() => setOpen(false)}
               className="flex items-center gap-2.5 px-4 py-3 font-body text-sm text-brown hover:bg-beige transition-colors"
             >

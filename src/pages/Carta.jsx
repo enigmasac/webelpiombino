@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion, useInView, AnimatePresence } from "motion/react";
 import { menuCategories } from "../data/menu";
 import { menuImages } from "../data/menuImages";
@@ -392,6 +393,17 @@ function SectionDivider() {
 export default function Carta() {
   const [search, setSearch] = useState("");
   const [photoItem, setPhotoItem] = useState(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (!hash) return;
+    const timer = setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [location.hash]);
 
   const scrollToCategory = useCallback((id) => {
     const el = document.getElementById(id);
