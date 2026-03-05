@@ -77,6 +77,12 @@ export default function Footer() {
           <p className="text-cream/30 text-xs">
             &copy; {new Date().getFullYear()} El Piombino. Todos los derechos reservados.
           </p>
+          <p className="text-cream/20 text-[10px]">
+            Desarrollado por{" "}
+            <a href="https://www.enigmasac.com" target="_blank" rel="noopener noreferrer" className="hover:text-cream/40 transition-colors underline">
+              Enigma Developers
+            </a>
+          </p>
         </div>
       </div>
     </footer>
