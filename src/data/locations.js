@@ -10,6 +10,8 @@ export const locations = [
     mapsUrl: "https://maps.google.com/?q=El+Piombino+Av+Rafael+Escardo+711+San+Miguel+Lima",
     wazeUrl: "https://www.waze.com/ul?ll=-12.0769,-77.0886&navigate=yes&zoom=17",
     orderUrl: "https://pedidos.elpiombino.pe/san-miguel",
+    razonSocial: "Inversiones Alimentarias Umarol SAC",
+    ruc: "20547254776",
   },
   {
     id: "surco",
@@ -22,6 +24,8 @@ export const locations = [
     mapsUrl: "https://maps.google.com/?q=El+Piombino+Av+Pedro+Venturo+271+Surco+Lima",
     wazeUrl: "https://www.waze.com/ul?ll=-12.1465,-76.9910&navigate=yes&zoom=17",
     orderUrl: "https://pedidos.elpiombino.pe/surco",
+    razonSocial: "Inversiones Alimentarias Umarol SAC",
+    ruc: "20547254776",
   },
   {
     id: "san-isidro",
@@ -34,5 +38,7 @@ export const locations = [
     mapsUrl: "https://maps.google.com/?q=El+Piombino+Av+Guardia+Civil+696+San+Isidro+Lima",
     wazeUrl: "https://www.waze.com/ul?ll=-12.1050,-77.0178&navigate=yes&zoom=17",
     orderUrl: "https://pedidos.elpiombino.pe/san-isidro",
+    razonSocial: "La Crossariole SAC",
+    ruc: "20509778974",
   },
 ];

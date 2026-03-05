@@ -170,8 +170,8 @@ export default function LibroReclamaciones() {
                 <div className="bg-cream rounded-2xl border border-line p-8 md:p-10 mb-8">
                   <h3 className="font-heading text-lg text-brown mb-3">Datos del proveedor</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-brown/70">
-                    <p><span className="font-semibold text-brown">Razon social:</span> El Piombino S.A.C.</p>
-                    <p><span className="font-semibold text-brown">RUC:</span> 20XXXXXXXXX</p>
+                    <p><span className="font-semibold text-brown">Razon social:</span> {selectedLocation.razonSocial}</p>
+                    <p><span className="font-semibold text-brown">RUC:</span> {selectedLocation.ruc}</p>
                     <p className="md:col-span-2"><span className="font-semibold text-brown">Direccion:</span> {selectedLocation.address}</p>
                   </div>
                 </div>
