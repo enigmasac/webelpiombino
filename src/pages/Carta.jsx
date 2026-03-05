@@ -98,11 +98,16 @@ function CategoryGrid({ onSelect }) {
   );
 }
 
+function slugify(str) {
+  return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 function MenuItem({ item, index, altCard, onShowPhoto }) {
   const hasPhoto = !!menuImages[item.name];
 
   return (
     <div
+      id={`item-${slugify(item.name)}`}
       className={`group rounded-xl border border-line/30 px-4 py-3.5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 animate-fade-up ${altCard ? "bg-beige" : "bg-cream"} ${hasPhoto ? "cursor-pointer" : ""}`}
       style={{ animationDelay: `${Math.min(index * 40, 400)}ms` }}
       onClick={hasPhoto ? () => onShowPhoto(item) : undefined}
@@ -398,9 +403,15 @@ export default function Carta() {
   useEffect(() => {
     const hash = location.hash.replace("#", "");
     if (!hash) return;
+    const isItem = hash.startsWith("item-");
     const timer = setTimeout(() => {
       const el = document.getElementById(hash);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: isItem ? "center" : "start" });
+      if (isItem) {
+        el.classList.add("ring-2", "ring-blue", "ring-offset-2");
+        setTimeout(() => el.classList.remove("ring-2", "ring-blue", "ring-offset-2"), 2000);
+      }
     }, 400);
     return () => clearTimeout(timer);
   }, [location.hash]);
