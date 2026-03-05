@@ -36,9 +36,9 @@ export const favorites = [
   },
   {
     id: 6,
-    name: "Pionono de Fresa",
+    name: "Pionono de Chantilly",
     category: "Postres",
-    itemSlug: "postres",
-    image: "/images/favorites/pionono-de-fresa.jpg",
+    itemSlug: "item-pionono-de-chantilly",
+    image: "/images/favorites/pionono-de-chantilly.jpg",
   },
 ];
