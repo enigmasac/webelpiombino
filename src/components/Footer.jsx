@@ -74,6 +74,16 @@ export default function Footer() {
             ))}
           </div>
 
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
+            <Link to="/politica-de-privacidad" className="text-cream/30 hover:text-cream/50 text-xs transition-colors">
+              Politica de privacidad
+            </Link>
+            <span className="text-cream/20">|</span>
+            <Link to="/politica-de-cookies" className="text-cream/30 hover:text-cream/50 text-xs transition-colors">
+              Politica de cookies
+            </Link>
+          </div>
+
           <p className="text-cream/30 text-xs">
             &copy; {new Date().getFullYear()} El Piombino. Todos los derechos reservados.
           </p>

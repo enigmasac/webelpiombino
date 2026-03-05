@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 
 const STORAGE_KEY = "piombino_cookies_accepted";
@@ -29,7 +30,10 @@ export default function CookieConsent() {
           className="fixed bottom-20 lg:bottom-6 left-4 right-4 lg:left-auto lg:right-6 lg:max-w-md z-50 bg-brown text-cream rounded-2xl p-5 shadow-2xl"
         >
           <p className="text-sm leading-relaxed mb-4">
-            Usamos cookies para mejorar tu experiencia en nuestro sitio. Al continuar navegando, aceptas nuestro uso de cookies.
+            Usamos cookies para mejorar tu experiencia en nuestro sitio. Al continuar navegando, aceptas nuestro uso de cookies.{" "}
+            <Link to="/politica-de-cookies" className="underline hover:text-white transition-colors" onClick={accept}>
+              Mas informacion
+            </Link>
           </p>
           <div className="flex gap-3">
             <button

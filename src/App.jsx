@@ -15,6 +15,8 @@ const TrabajaConNosotros = lazy(() => import("./pages/TrabajaConNosotros"));
 const Contacto = lazy(() => import("./pages/Contacto"));
 const LibroReclamaciones = lazy(() => import("./pages/LibroReclamaciones"));
 const Proveedores = lazy(() => import("./pages/Proveedores"));
+const PoliticaPrivacidad = lazy(() => import("./pages/PoliticaPrivacidad"));
+const PoliticaCookies = lazy(() => import("./pages/PoliticaCookies"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -48,6 +50,8 @@ export default function App() {
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/libro-reclamaciones" element={<LibroReclamaciones />} />
             <Route path="/proveedores" element={<Proveedores />} />
+            <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
+            <Route path="/politica-de-cookies" element={<PoliticaCookies />} />
           </Routes>
         </Suspense>
       </main>
