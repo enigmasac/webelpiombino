@@ -91,12 +91,12 @@ export default function Favorites() {
     <section className="bg-cream py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
-          <span className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-brown/50">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-brown">
             Nuestros favoritos
-          </span>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-brown mt-3">
-            Lo que nos hace especiales
           </h2>
+          <p className="font-body text-sm md:text-base text-brown/50 mt-3">
+            Lo que nos hace especiales
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
