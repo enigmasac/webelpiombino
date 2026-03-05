@@ -112,10 +112,10 @@ function MenuItem({ item, index, altCard, onShowPhoto }) {
             <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="M21 15l-5-5L5 21" />
           </svg>
         )}
-        <span className="font-body text-sm font-semibold text-brown shrink-0">
+        <span className="font-body text-sm font-semibold text-brown min-w-0">
           {item.name}
         </span>
-        <span className="flex-1 border-b border-dotted border-brown/15 translate-y-[-3px] min-w-4" />
+        <span className="flex-1 border-b border-dotted border-brown/15 translate-y-[-3px] min-w-4 shrink-[2]" />
         <span className="font-body text-sm font-bold text-blue shrink-0 tabular-nums">
           S/{item.price.toFixed(2)}
         </span>
@@ -438,6 +438,17 @@ export default function Carta() {
       </section>
 
       <CategoryGrid onSelect={scrollToCategory} />
+
+      <div className="bg-beige border-b border-line/40">
+        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-center gap-2 text-brown/40">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 shrink-0">
+            <circle cx="12" cy="12" r="10" /><path d="M12 16v-4M12 8h.01" />
+          </svg>
+          <p className="font-body text-[11px]">
+            Todos los precios incluyen IGV. Algunos de nuestros platos pueden contener alergenos. Consulta con nuestro personal.
+          </p>
+        </div>
+      </div>
 
       <div className="sticky top-20 lg:top-24 z-40 bg-cream/90 backdrop-blur-lg border-b border-line/60 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 py-3">
